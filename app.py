@@ -10,7 +10,7 @@ def index():
         character_id = request.form.get("character_id")
         if character_id:
             try:
-                response = requests.get("https://swapi.py4e.com/api/people/{character_id}/")
+                response = requests.get(f"https://swapi.py4e.com/api/people/{character_id}/")
                 if response.status_code == 200:
                     character_data = response.json()
                 else:
